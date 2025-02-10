@@ -49,17 +49,11 @@ app.get("/api/v1/prov/:code-province", (c) => {
 });
 
 app.get("/api/v1/province/:province", (c) => {
-  const province = c.req.param("province"); // Ambil parameter dari URL
+  const province = c.req.param("province");
   console.log("Requested Province:", province);
   console.log("Data Provinces:", dataProvinces);
 
   const provinceData = dataProvinces.find((prov) => {
-    console.log(
-      "Checking:",
-      prov.province.toLowerCase(),
-      "===",
-      province.toLowerCase()
-    );
     return prov.province.toLowerCase() === province.toLowerCase();
   });
 
