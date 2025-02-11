@@ -1,26 +1,30 @@
-# INA-province
+# INA-Zona
 
 ## Overview
 
-This is a REST API built with Hono to provide detailed information about the 38 provinces of Indonesia
+This is a REST API built with Hono to provide CRUD operations on provincess.
 
 ## Features
 
-- Get all provinces
-- Get province by id
-- Create new province
-- Update province by id
-- Delete province by id
+- Get all provincess
+- Get provinces by id
+- Create new provinces
+- Update provinces by id
+- Delete provinces by id
 
 ## Rest API Specification
 
-| Enpoint Path           | Method   | Description           |
-| ---------------------- | -------- | --------------------- |
-| `/api/v1/province`     | `GET`    | Get all provinces     |
-| `/api/v1/province/:id` | `GET`    | Get province by id    |
-| `/api/v1/province/:id` | `PUT`    | Update province by id |
-| `/api/v1/province/:id` | `DELETE` | Delete province by id |
-| `/api/v1/province`     | `POST`   | Create new province   |
+Prefix: `/api/v1`
+
+| Enpoint Path            | Method   | Description            |
+| ----------------------- | -------- | ---------------------- |
+| `provinces`             | `GET`    | Get all provinces      |
+| `provinces/:id`         | `GET`    | Get provinces by id    |
+| `provinces/code/:code`  | `GET`    | Get provinces by code  |
+| `provinces/:slug/:slug` | `GET`    | Get provinces by slug  |
+| `provinces`             | `POST`   | Create new province    |
+| `provinces/:id`         | `DELETE` | Delete provinces by id |
+| `provinces/:id`         | `PATCH`  | Update provinces by id |
 
 ## Getting Started
 
