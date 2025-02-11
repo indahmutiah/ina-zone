@@ -3,4 +3,6 @@ export type Province = {
   code: number;
   slug: string;
   name: string;
+  createdAt: Date;
+  updatedAt: Date;
 };

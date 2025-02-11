@@ -9,6 +9,6 @@ app.get("/", (c) => {
   });
 });
 
-app.route("/api/v1/provinces", provinceRoute);
+app.route("/api/provinces", provinceRoute);
 
 export default app;
