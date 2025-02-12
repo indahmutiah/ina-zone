@@ -1,0 +1,7 @@
+services:
+  backend:
+    image: ina-zone-image # Remember to change the image name
+    build:
+      context: .
+    ports:
+      - "3000:3000"
