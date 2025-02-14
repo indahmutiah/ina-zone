@@ -5,3 +5,11 @@ services:
       context: .
     ports:
       - "3000:3000"
+  database:
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ina_user
+      POSTGRES_PASSWORD: ina_password
+      POSTGRES_DB: ina_database
