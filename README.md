@@ -1,8 +1,16 @@
-# INA-Zona
+# INA-ZonE
 
 ## Overview
 
-This is a REST API built with Hono to provide CRUD operations on provincess.
+This is a REST API built with Hono to provide CRUD operations on provincess and zone of Indonesia using PostgreSQL database.
+
+## Tech Stack
+
+- Bun
+- Hono
+- TypeScript
+- Docker
+- PostgreSQL
 
 ## Features
 
