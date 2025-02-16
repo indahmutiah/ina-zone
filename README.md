@@ -1,4 +1,4 @@
-# INA-ZonE
+# INA-Zone API
 
 ## Overview
 
