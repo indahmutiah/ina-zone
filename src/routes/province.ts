@@ -1,5 +1,5 @@
 import { provinces } from "@/data/province";
-import { Province } from "@/types/province";
+import { Province } from "@/types/zone";
 import { Hono } from "hono";
 
 let dataProvince = provinces;

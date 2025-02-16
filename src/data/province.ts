@@ -1,4 +1,4 @@
-import { Province } from "@/types/province";
+import { Province } from "@/types/zone";
 
 export const provinces: Province[] = [
   {
