@@ -12,6 +12,10 @@ This is a REST API built with Hono to provide CRUD operations on provincess and 
 - Docker
 - PostgreSQL
 
+## ER Diagram
+
+![ER Diagram](/img/erd-inazone.png)
+
 ## Features
 
 - Get all provincess
