@@ -14,7 +14,7 @@ This is a REST API built with Hono to provide CRUD operations on provincess and 
 
 ## ER Diagram
 
-![ER Diagram](/img/erd-inazone.png)
+![ER Diagram](/assets/erd-ina-zone.png)
 
 ## Features
 

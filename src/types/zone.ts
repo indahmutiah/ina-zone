@@ -19,7 +19,6 @@ export type City = {
 
 export type District = {
   id: number;
-  provinceId: number;
   cityId: number;
   code: number;
   slug: string;
@@ -30,8 +29,6 @@ export type District = {
 
 export type Subdistrict = {
   id: number;
-  provinceId: number;
-  cityId: number;
   districtId: number;
   code: number;
   slug: string;
