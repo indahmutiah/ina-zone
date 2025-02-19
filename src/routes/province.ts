@@ -1,8 +1,8 @@
 import { provinces } from "@/data/province";
-import { Province } from "@/types/zone";
+import { type Province } from "@/types/zone";
 import { Hono } from "hono";
 
-let dataProvince = provinces;
+let dataProvinces = provinces;
 
 export const provinceRoute = new Hono();
 
@@ -10,20 +10,17 @@ export const provinceRoute = new Hono();
 provinceRoute.get("/", (c) => {
   return c.json({
     message: "Get All Provinces",
-    data: dataProvince,
+    data: dataProvinces,
   });
 });
 
 // Get Province By Id
 provinceRoute.get("/:id", (c) => {
   const id = c.req.param("id");
-  const province = dataProvince.find((province) => province.id === Number(id));
+  const province = dataProvinces.find((province) => province.id === Number(id));
 
   if (!province) {
-    return c.json({
-      message: "404 Not Found",
-      data: null,
-    });
+    return c.json({ message: "Province not found" }, 404);
   }
 
   return c.json({
@@ -35,15 +32,12 @@ provinceRoute.get("/:id", (c) => {
 // Get Province By Code
 provinceRoute.get("/code/:code", (c) => {
   const code = c.req.param("code");
-  const province = dataProvince.find(
+  const province = dataProvinces.find(
     (province) => province.code === Number(code)
   );
 
   if (!province) {
-    return c.json({
-      message: "404 Not Found",
-      data: null,
-    });
+    return c.json({ message: "Province not found" }, 404);
   }
 
   return c.json({
@@ -55,15 +49,12 @@ provinceRoute.get("/code/:code", (c) => {
 // Get Province By Slug
 provinceRoute.get("/slug/:slug", (c) => {
   const slug = c.req.param("slug");
-  const province = dataProvince.find((province) => {
+  const province = dataProvinces.find((province) => {
     return province.slug.toLowerCase() === slug.toLowerCase();
   });
 
   if (!province) {
-    return c.json({
-      message: "404 Not Found",
-      data: null,
-    });
+    return c.json({ message: "Province not found" }, 404);
   }
 
   return c.json({
@@ -77,29 +68,23 @@ provinceRoute.post("/create", async (c) => {
   const body: Omit<Province, "id" | "createdAt" | "updatedAt"> =
     await c.req.json();
 
-  const findDuplicateProvince = dataProvince.find(
+  const findDuplicateProvince = dataProvinces.find(
     (province) => province.name.toLowerCase() === body.name.toLowerCase()
   );
 
   if (findDuplicateProvince) {
-    return c.json(
-      {
-        message: "Province already exists",
-        data: null,
-      },
-      409
-    );
+    return c.json({ message: "Province already exists" }, 409);
   }
 
   const newProvince: Province = {
-    id: dataProvince[dataProvince.length - 1].id + 1,
+    id: dataProvinces[dataProvinces.length - 1].id + 1,
     ...body,
     createdAt: new Date(),
     updatedAt: new Date(),
   };
 
-  const updatedProvince = [...dataProvince, newProvince];
-  dataProvince = updatedProvince;
+  const updatedProvince = [...dataProvinces, newProvince];
+  dataProvinces = updatedProvince;
 
   return c.json({
     message: "Province created successfully",
@@ -110,23 +95,17 @@ provinceRoute.post("/create", async (c) => {
 // Delete Province By Id
 provinceRoute.delete("/:id", async (c) => {
   const id = c.req.param("id");
-  const foundProvince = dataProvince.find(
+  const foundProvince = dataProvinces.find(
     (province) => province.id === Number(id)
   );
 
   if (!foundProvince) {
-    return c.json(
-      {
-        message: "404 Not Found",
-        data: null,
-      },
-      404
-    );
+    return c.json({ message: "Province not found" }, 404);
   }
-  const updatedProvince = dataProvince.filter(
+  const updatedProvince = dataProvinces.filter(
     (province) => province.id !== Number(id)
   );
-  dataProvince = updatedProvince;
+  dataProvinces = updatedProvince;
 
   return c.json({
     message: "Province deleted successfully",
@@ -137,18 +116,12 @@ provinceRoute.delete("/:id", async (c) => {
 // Update Province By Id
 provinceRoute.patch("/:id", async (c) => {
   const id = c.req.param("id");
-  const foundProvince = dataProvince.find(
+  const foundProvince = dataProvinces.find(
     (province) => province.id === Number(id)
   );
 
   if (!foundProvince) {
-    return c.json(
-      {
-        message: "404 Not Found",
-        data: null,
-      },
-      404
-    );
+    return c.json({ message: "Province not found" }, 404);
   }
 
   const body = await c.req.json();
@@ -158,10 +131,10 @@ provinceRoute.patch("/:id", async (c) => {
     updatedAt: new Date(),
   };
 
-  const updatedProvinces = dataProvince.map((province) =>
+  const updatedProvinces = dataProvinces.map((province) =>
     province.id === Number(id) ? updatedProvince : province
   );
-  dataProvince = updatedProvinces;
+  dataProvinces = updatedProvinces;
 
   return c.json({
     message: "Province updated successfully",
@@ -173,30 +146,30 @@ provinceRoute.patch("/:id", async (c) => {
 provinceRoute.put("/:id", async (c) => {
   const id = c.req.param("id");
   const body = await c.req.json();
-  const foundProvince = dataProvince.find(
+  const foundProvince = dataProvinces.find(
     (province) => province.id === Number(id)
   );
 
   if (!foundProvince) {
     const newProvince: Province = {
-      id: dataProvince[dataProvince.length - 1].id + 1,
+      id: dataProvinces[dataProvinces.length - 1].id + 1,
       ...body,
       createdAt: new Date(),
       updatedAt: new Date(),
     };
-    const updatedProvince = [...dataProvince, newProvince];
+    const updatedProvince = [...dataProvinces, newProvince];
 
     return c.json({
       message: "Province created successfully",
       data: updatedProvince,
     });
   }
-  const updatedProvince = dataProvince.map((province) =>
+  const updatedProvince = dataProvinces.map((province) =>
     province.id === Number(id)
       ? { ...foundProvince, ...body, updatedAt: new Date() }
       : province
   );
-  dataProvince = updatedProvince;
+  dataProvinces = updatedProvince;
 
   return c.json({
     message: "Province updated successfully",
