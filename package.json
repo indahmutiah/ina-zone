@@ -1,11 +1,14 @@
 {
   "name": "ina-zone",
+  "type": "module",
   "scripts": {
     "dev": "bun run --hot src/index.ts",
     "start": "bun run src/index.ts"
   },
   "dependencies": {
-    "hono": "^4.6.20"
+    "@types/pg": "^8.11.11",
+    "hono": "^4.6.20",
+    "pg": "^8.13.3"
   },
   "devDependencies": {
     "@types/bun": "latest"
