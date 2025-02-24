@@ -4,6 +4,7 @@ import { Hono } from "hono";
 import * as pg from "pg";
 
 let dataProvinces = provinces;
+
 const client = new pg.Client({
   connectionString: process.env.DATABASE_URL,
 });
@@ -15,12 +16,12 @@ export const provinceRoute = new Hono();
 // Get All Provinces
 provinceRoute.get("/", async (c) => {
   try {
-    const res_provinces = await client.query("SELECT * FROM provinces");
+    const resultProvinces = await client.query("SELECT * FROM provinces");
 
     return c.json(
       {
         message: "Get All Provinces",
-        data: res_provinces.rows,
+        data: resultProvinces.rows,
       },
       200
     );

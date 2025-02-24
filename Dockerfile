@@ -1,6 +1,6 @@
 # Use the official Bun image with Debian Linux
 # Oven is the company name, the creator of Bun
-FROM oven/bun:debian
+FROM oven/bun:1.1
 
 # Create and change to the app directory
 WORKDIR /usr/src/app
