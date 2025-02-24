@@ -1,32 +1,52 @@
 import { provinces } from "@/data/province";
 import { type Province } from "@/types/zone";
 import { Hono } from "hono";
+import * as pg from "pg";
 
 let dataProvinces = provinces;
+const client = new pg.Client({
+  connectionString: process.env.DATABASE_URL,
+});
+
+await client.connect();
 
 export const provinceRoute = new Hono();
 
 // Get All Provinces
-provinceRoute.get("/", (c) => {
-  return c.json({
-    message: "Get All Provinces",
-    data: dataProvinces,
-  });
+provinceRoute.get("/", async (c) => {
+  try {
+    const res_provinces = await client.query("SELECT * FROM provinces");
+
+    return c.json(
+      {
+        message: "Get All Provinces",
+        data: res_provinces.rows,
+      },
+      200
+    );
+  } catch (error) {
+    return c.json({ message: "Internal Server Error" }, 500);
+  }
 });
 
 // Get Province By Id
-provinceRoute.get("/:id", (c) => {
+provinceRoute.get("/:id", async (c) => {
   const id = c.req.param("id");
-  const province = dataProvinces.find((province) => province.id === Number(id));
+  try {
+    const res_provinces = await client.query(
+      `SELECT * FROM provinces WHERE id = ${id}`
+    );
 
-  if (!province) {
-    return c.json({ message: "Province not found" }, 404);
+    if (res_provinces.rows.length === 0) {
+      return c.json({ message: "Province not found" }, 404);
+    }
+    return c.json({
+      message: "Get Province By Id",
+      data: res_provinces.rows[0],
+    });
+  } catch (error) {
+    return c.json({ message: "Internal Server Error" }, 500);
   }
-
-  return c.json({
-    message: "Get Province By Id",
-    data: province,
-  });
 });
 
 // Get Province By Code
