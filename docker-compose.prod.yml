@@ -1,4 +1,10 @@
 services:
+  backend:
+    image: ina-zone-image
+    build:
+      context: .
+    ports:
+      - "3000:3000"
   database:
     image: postgres:alpine
     ports:

@@ -26,7 +26,7 @@ provinceRoute.get("/", async (c) => {
       200
     );
   } catch (error) {
-    return c.json({ message: "Internal Server Error" }, 500);
+    return c.json({ message: "Failed to get all provinces", error }, 500);
   }
 });
 
