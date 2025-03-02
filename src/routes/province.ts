@@ -2,6 +2,12 @@ import { provinces } from "@/data/province";
 import { type Province } from "@/types/zone";
 import { Hono } from "hono";
 import * as pg from "pg";
+import { PrismaClient } from "@prisma/client";
+import app from "..";
+
+const prisma = new PrismaClient({
+  log: ["query"],
+});
 
 let dataProvinces = provinces;
 
@@ -13,37 +19,32 @@ await client.connect();
 
 export const provinceRoute = new Hono();
 
-// Get All Provinces
+// Get All Provinces from Database prisma
 provinceRoute.get("/", async (c) => {
-  try {
-    const resultProvinces = await client.query("SELECT * FROM provinces");
-
-    return c.json(
-      {
-        message: "Get All Provinces",
-        data: resultProvinces.rows,
-      },
-      200
-    );
-  } catch (error) {
-    return c.json({ message: "Failed to get all provinces", error }, 500);
-  }
+  const resultProvinces = await prisma.province.findMany();
+  return c.json({
+    message: "Get All Provinces",
+    data: resultProvinces,
+  });
 });
 
 // Get Province By Id
 provinceRoute.get("/:id", async (c) => {
   const id = c.req.param("id");
   try {
-    const res_provinces = await client.query(
-      `SELECT * FROM provinces WHERE id = ${id}`
-    );
+    const resultProvince = await prisma.province.findUnique({
+      where: {
+        id: Number(id),
+      },
+    });
 
-    if (res_provinces.rows.length === 0) {
+    if (resultProvince === null) {
       return c.json({ message: "Province not found" }, 404);
     }
+
     return c.json({
       message: "Get Province By Id",
-      data: res_provinces.rows[0],
+      data: resultProvince,
     });
   } catch (error) {
     return c.json({ message: "Internal Server Error" }, 500);
@@ -51,36 +52,40 @@ provinceRoute.get("/:id", async (c) => {
 });
 
 // Get Province By Code
-provinceRoute.get("/code/:code", (c) => {
+provinceRoute.get("/code/:code", async (c) => {
   const code = c.req.param("code");
-  const province = dataProvinces.find(
-    (province) => province.code === Number(code)
-  );
+  const resultProvince = await prisma.province.findFirst({
+    where: {
+      code: Number(code),
+    },
+  });
 
-  if (!province) {
+  if (!resultProvince) {
     return c.json({ message: "Province not found" }, 404);
   }
 
   return c.json({
     message: "Get Province By Code",
-    data: province,
+    data: resultProvince,
   });
 });
 
 // Get Province By Slug
-provinceRoute.get("/slug/:slug", (c) => {
+provinceRoute.get("/slug/:slug", async (c) => {
   const slug = c.req.param("slug");
-  const province = dataProvinces.find((province) => {
-    return province.slug.toLowerCase() === slug.toLowerCase();
+  const resultProvince = await prisma.province.findFirst({
+    where: {
+      slug: slug.toLowerCase(),
+    },
   });
 
-  if (!province) {
+  if (!resultProvince) {
     return c.json({ message: "Province not found" }, 404);
   }
 
   return c.json({
     message: "Get Province By Slug",
-    data: province,
+    data: resultProvince,
   });
 });
 

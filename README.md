@@ -11,6 +11,7 @@ This is a REST API built with Hono to provide CRUD operations on provincess and 
 - TypeScript
 - Docker
 - PostgreSQL
+- Prisma
 
 ## ER Diagram
 

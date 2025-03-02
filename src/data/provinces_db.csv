@@ -1,0 +1,39 @@
+id;code;name;slug
+1;11;Aceh;aceh
+2;12;Sumatera Utara;sumatera-utara
+3;13;Sumatera Barat;sumatera-barat
+4;14;Riau;riau
+5;15;Jambi;jambi
+6;16;Sumatera Selatan;sumatera-selatan
+7;17;Bengkulu;bengkulu
+8;18;Lampung;lampung
+9;19;Kepulauan Bangka Belitung;kepulauan-bangka-belitung
+10;21;Kepulauan Riau;kepulauan-riau
+11;31;DKI Jakarta;dki-jakarta
+12;32;Jawa Barat;jawa-barat
+13;33;Jawa Tengah;jawa-tengah
+14;34;DI Yogyakarta;di-yogyakarta
+15;35;Jawa Timur;jawa-timur
+16;36;Banten;banten
+17;51;Bali;bali
+18;52;Nusa Tenggara Barat;nusa-tenggara-barat
+19;53;Nusa Tenggara Timur;nusa-tenggara-timur
+20;61;Kalimantan Barat;kalimantan-barat
+21;62;Kalimantan Tengah;kalimantan-tengah
+22;63;Kalimantan Selatan;kalimantan-selatan
+23;64;Kalimantan Timur;kalimantan-timur
+24;65;Kalimantan Utara;kalimantan-utara
+25;71;Sulawesi Utara;sulawesi-utara
+26;72;Sulawesi Tengah;sulawesi-tengah
+27;73;Sulawesi Selatan;sulawesi-selatan
+28;74;Sulawesi Tenggara;sulawesi-tenggara
+29;75;Gorontalo;gorontalo
+30;76;Sulawesi Barat;sulawesi-barat
+31;81;Maluku;maluku
+32;82;Maluku Utara;maluku-utara
+33;91;Papua;papua
+34;92;Papua Barat;papua-barat
+35;93;Papua Selatan;papua-selatan
+36;94;Papua Tengah;papua-tengah
+37;95;Papua Pegunungan;papua-pegunungan
+38;96;Papua Barat Daya;papua-barat-daya
