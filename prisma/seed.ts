@@ -1,33 +1,20 @@
 import { PrismaClient } from "@prisma/client";
-import { createReadStream } from "fs";
-import * as csvParser from "csv-parser";
+import { provinces } from "@/data/provinces";
 
 const prisma = new PrismaClient();
 
 async function main() {
-  const results: { id: number; code: number; slug: string; name: string }[] =
-    [];
-
-  await new Promise((resolve, reject) => {
-    createReadStream("src/data/provinces_db.csv")
-      .pipe(csvParser())
-      .on("data", (data) => {
-        results.push({
-          id: Number(data.id),
-          code: Number(data.code),
-          name: data.name,
-          slug: data.slug,
-        });
-      })
-      .on("end", resolve)
-      .on("error", reject);
-  });
-  for (const result of results) {
-    await prisma.province.create({
-      data: result,
+  for (const province of provinces) {
+    const upsertedProvince = await prisma.province.upsert({
+      where: { slug: province.slug },
+      update: province,
+      create: province,
     });
+
+    console.log(`Province: ${upsertedProvince.name}`);
   }
 }
+
 main()
   .catch((e) => {
     console.error(e);
