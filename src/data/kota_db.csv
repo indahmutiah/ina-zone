@@ -1,0 +1,539 @@
+id;name;slug;provinceId
+11.01;Aceh Selatan;aceh-selatan;1
+11.02;Aceh Tenggara;aceh-tenggara;1
+11.03;Aceh Timur;aceh-timur;1
+11.04;Aceh Tengah;aceh-tengah;1
+11.05;Aceh Barat;aceh-barat;1
+11.06;Aceh Besar;aceh-besar;1
+11.07;Pidie;pidie;1
+11.08;Aceh Utara;aceh-utara;1
+11.09;Simeulue;simeulue;1
+11.10;Aceh Singkil;aceh-singkil;1
+11.11;Bireuen;bireuen;1
+11.12;Aceh Barat Daya;aceh-barat-daya;1
+11.13;Gayo Lues;gayo-lues;1
+11.14;Aceh Jaya;aceh-jaya;1
+11.15;Nagan Raya;nagan-raya;1
+11.16;Aceh Tamiang;aceh-tamiang;1
+11.17;Bener Meriah;bener-meriah;1
+11.18;Pidie Jaya;pidie-jaya;1
+11.71;Kota Banda Aceh;kota-banda-aceh;1
+11.72;Kota Sabang;kota-sabang;1
+11.73;Kota Lhokseumawe;kota-lhokseumawe;1
+11.74;Kota Langsa;kota-langsa;1
+11.75;Kota Subulussalam;kota-subulussalam;1
+12.01;Tapanuli Tengah;tapanuli-tengah;2
+12.02;Tapanuli Utara;tapanuli-utara;2
+12.03;Tapanuli Selatan;tapanuli-selatan;2
+12.04;Nias;nias;2
+12.05;Langkat;langkat;2
+12.06;Karo;karo;2
+12.07;Deli Serdang;deli-serdang;2
+12.08;Simalungun;simalungun;2
+12.09;Asahan;asahan;2
+12.10;Labuhanbatu;labuhanbatu;2
+12.11;Dairi;dairi;2
+12.12;Toba;toba;2
+12.13;Mandailing Natal;mandailing-natal;2
+12.14;Nias Selatan;nias-selatan;2
+12.15;Pakpak Bharat;pakpak-bharat;2
+12.16;Humbang Hasundutan;humbang-hasundutan;2
+12.17;Samosir;samosir;2
+12.18;Serdang Bedagai;serdang-bedagai;2
+12.19;Batu Bara;batu-bara;2
+12.20;Padang Lawas Utara;padang-lawas-utara;2
+12.21;Padang Lawas;padang-lawas;2
+12.22;Labuhanbatu Selatan;labuhanbatu-selatan;2
+12.23;Labuhanbatu Utara;labuhanbatu-utara;2
+12.24;Nias Utara;nias-utara;2
+12.25;Nias Barat;nias-barat;2
+12.71;Kota Medan;kota-medan;2
+12.72;Kota Pematangsiantar;kota-pematangsiantar;2
+12.73;Kota Sibolga;kota-sibolga;2
+12.74;Kota Tanjung Balai;kota-tanjung-balai;2
+12.75;Kota Binjai;kota-binjai;2
+12.76;Kota Tebing Tinggi;kota-tebing-tinggi;2
+12.77;Kota Padangsidimpuan;kota-padangsidimpuan;2
+12.78;Kota Gunungsitoli;kota-gunungsitoli;2
+13.01;Pesisir Selatan;pesisir-selatan;3
+13.02;Solok;solok;3
+13.03;Sijunjung;sijunjung;3
+13.04;Tanah Datar;tanah-datar;3
+13.05;Padang Pariaman;padang-pariaman;3
+13.06;Agam;agam;3
+13.07;Lima Puluh Kota;lima-puluh-kota;3
+13.08;Pasaman;pasaman;3
+13.09;Kepulauan Mentawai;kepulauan-mentawai;3
+13.10;Dharmasraya;dharmasraya;3
+13.11;Solok Selatan;solok-selatan;3
+13.12;Pasaman Barat;pasaman-barat;3
+13.71;Kota Padang;kota-padang;3
+13.72;Kota Solok;kota-solok;3
+13.73;Kota Sawahlunto;kota-sawahlunto;3
+13.74;Kota Padang Panjang;kota-padang-panjang;3
+13.75;Kota Bukittinggi;kota-bukittinggi;3
+13.76;Kota Payakumbuh;kota-payakumbuh;3
+13.77;Kota Pariaman;kota-pariaman;3
+14.01;Kampar;kampar;4
+14.02;Indragiri Hulu;indragiri-hulu;4
+14.03;Bengkalis;bengkalis;4
+14.04;Indragiri Hilir;indragiri-hilir;4
+14.05;Pelalawan;pelalawan;4
+14.06;Rokan Hulu;rokan-hulu;4
+14.07;Rokan Hilir;rokan-hilir;4
+14.08;Siak;siak;4
+14.09;Kuantan Singingi;kuantan-singingi;4
+14.10;Kepulauan Meranti;kepulauan-meranti;4
+14.71;Kota Pekanbaru;kota-pekanbaru;4
+14.72;Kota Dumai;kota-dumai;4
+15.01;Kerinci;kerinci;5
+15.02;Merangin;merangin;5
+15.03;Sarolangun;sarolangun;5
+15.04;Batanghari;batanghari;5
+15.05;Muaro Jambi;muaro-jambi;5
+15.06;Tanjung Jabung Barat;tanjung-jabung-barat;5
+15.07;Tanjung Jabung Timur;tanjung-jabung-timur;5
+15.08;Bungo;bungo;5
+15.09;Tebo;tebo;5
+15.71;Kota Jambi;kota-jambi;5
+15.72;Kota Sungai Penuh;kota-sungai-penuh;5
+16.01;Ogan Komering Ulu;ogan-komering-ulu;6
+16.02;Ogan Komering Ilir;ogan-komering-ilir;6
+16.03;Muara Enim;muara-enim;6
+16.04;Lahat;lahat;6
+16.05;Musi Rawas;musi-rawas;6
+16.06;Musi Banyuasin;musi-banyuasin;6
+16.07;Banyuasin;banyuasin;6
+16.08;Ogan Komering Ulu Timur;ogan-komering-ulu-timur;6
+16.09;Ogan Komering Ulu Selatan;ogan-komering-ulu-selatan;6
+16.10;Ogan Ilir;ogan-ilir;6
+16.11;Empat Lawang;empat-lawang;6
+16.12;Penukal Abab Lematang Ilir;penukal-abab-lematang-ilir;6
+16.13;Musi Rawas Utara;musi-rawas-utara;6
+16.71;Kota Palembang;kota-palembang;6
+16.72;Kota Pagar Alam;kota-pagar-alam;6
+16.73;Kota Lubuk Linggau;kota-lubuk-linggau;6
+16.74;Kota Prabumulih;kota-prabumulih;6
+17.01;Bengkulu Selatan;bengkulu-selatan;7
+17.02;Rejang Lebong;rejang-lebong;7
+17.03;Bengkulu Utara;bengkulu-utara;7
+17.04;Kaur;kaur;7
+17.05;Seluma;seluma;7
+17.06;Muko Muko;muko-muko;7
+17.07;Lebong;lebong;7
+17.08;Kepahiang;kepahiang;7
+17.09;Bengkulu Tengah;bengkulu-tengah;7
+17.71;Kota Bengkulu;kota-bengkulu;7
+18.01;Lampung Selatan;lampung-selatan;8
+18.02;Lampung Tengah;lampung-tengah;8
+18.03;Lampung Utara;lampung-utara;8
+18.04;Lampung Barat;lampung-barat;8
+18.05;Tulang Bawang;tulang-bawang;8
+18.06;Tanggamus;tanggamus;8
+18.07;Lampung Timur;lampung-timur;8
+18.08;Way Kanan;way-kanan;8
+18.09;Pesawaran;pesawaran;8
+18.10;Pringsewu;pringsewu;8
+18.11;Mesuji;mesuji;8
+18.12;Tulang Bawang Barat;tulang-bawang-barat;8
+18.13;Pesisir Barat;pesisir-barat;8
+18.71;Kota Bandar Lampung;kota-bandar-lampung;8
+18.72;Kota Metro;kota-metro;8
+19.01;Bangka;bangka;9
+19.02;Belitung;belitung;9
+19.03;Bangka Selatan;bangka-selatan;9
+19.04;Bangka Tengah;bangka-tengah;9
+19.05;Bangka Barat;bangka-barat;9
+19.06;Belitung Timur;belitung-timur;9
+19.71;Kota Pangkal Pinang;kota-pangkal-pinang;9
+21.01;Bintan;bintan;10
+21.02;Karimun;karimun;10
+21.03;Natuna;natuna;10
+21.04;Lingga;lingga;10
+21.05;Kepulauan Anambas;kepulauan-anambas;10
+21.71;Kota Batam;kota-batam;10
+21.72;Kota Tanjung Pinang;kota-tanjung-pinang;10
+31.01;Kepulauan Seribu;kepulauan-seribu;11
+31.71;Kota Jakarta Pusat;kota-jakarta-pusat;11
+31.72;Kota Jakarta Utara;kota-jakarta-utara;11
+31.73;Kota Jakarta Barat;kota-jakarta-barat;11
+31.74;Kota Jakarta Selatan;kota-jakarta-selatan;11
+31.75;Kota Jakarta Timur;kota-jakarta-timur;11
+32.01;Bogor;bogor;12
+32.02;Sukabumi;sukabumi;12
+32.03;Cianjur;cianjur;12
+32.04;Bandung;bandung;12
+32.05;Garut;garut;12
+32.06;Tasikmalaya;tasikmalaya;12
+32.07;Ciamis;ciamis;12
+32.08;Kuningan;kuningan;12
+32.09;Cirebon;cirebon;12
+32.10;Majalengka;majalengka;12
+32.11;Sumedang;sumedang;12
+32.12;Indramayu;indramayu;12
+32.13;Subang;subang;12
+32.14;Purwakarta;purwakarta;12
+32.15;Karawang;karawang;12
+32.16;Bekasi;bekasi;12
+32.17;Bandung Barat;bandung-barat;12
+32.18;Pangandaran;pangandaran;12
+32.71;Kota Bogor;kota-bogor;12
+32.72;Kota Sukabumi;kota-sukabumi;12
+32.73;Kota Bandung;kota-bandung;12
+32.74;Kota Cirebon;kota-cirebon;12
+32.75;Kota Bekasi;kota-bekasi;12
+32.76;Kota Depok;kota-depok;12
+32.77;Kota Cimahi;kota-cimahi;12
+32.78;Kota Tasikmalaya;kota-tasikmalaya;12
+32.79;Kota Banjar;kota-banjar;12
+33.01;Cilacap;cilacap;13
+33.02;Banyumas;banyumas;13
+33.03;Purbalingga;purbalingga;13
+33.04;Banjarnegara;banjarnegara;13
+33.05;Kebumen;kebumen;13
+33.06;Purworejo;purworejo;13
+33.07;Wonosobo;wonosobo;13
+33.08;Magelang;magelang;13
+33.09;Boyolali;boyolali;13
+33.10;Klaten;klaten;13
+33.11;Sukoharjo;sukoharjo;13
+33.12;Wonogiri;wonogiri;13
+33.13;Karanganyar;karanganyar;13
+33.14;Sragen;sragen;13
+33.15;Grobogan;grobogan;13
+33.16;Blora;blora;13
+33.17;Rembang;rembang;13
+33.18;Pati;pati;13
+33.19;Kudus;kudus;13
+33.20;Jepara;jepara;13
+33.21;Demak;demak;13
+33.22;Semarang;semarang;13
+33.23;Temanggung;temanggung;13
+33.24;Kendal;kendal;13
+33.25;Batang;batang;13
+33.26;Pekalongan;pekalongan;13
+33.27;Pemalang;pemalang;13
+33.28;Tegal;tegal;13
+33.29;Brebes;brebes;13
+33.71;Kota Magelang;kota-magelang;13
+33.72;Kota Surakarta;kota-surakarta;13
+33.73;Kota Salatiga;kota-salatiga;13
+33.74;Kota Semarang;kota-semarang;13
+33.75;Kota Pekalongan;kota-pekalongan;13
+33.76;Kota Tegal;kota-tegal;13
+34.01;Kulon Progo;kulon-progo;14
+34.02;Bantul;bantul;14
+34.03;Gunungkidul;gunungkidul;14
+34.04;Sleman;sleman;14
+34.71;Kota Yogyakarta;kota-yogyakarta;14
+35.01;Pacitan;pacitan;15
+35.02;Ponorogo;ponorogo;15
+35.03;Trenggalek;trenggalek;15
+35.04;Tulungagung;tulungagung;15
+35.05;Blitar;blitar;15
+35.06;Kediri;kediri;15
+35.07;Malang;malang;15
+35.08;Lumajang;lumajang;15
+35.09;Jember;jember;15
+35.10;Banyuwangi;banyuwangi;15
+35.11;Bondowoso;bondowoso;15
+35.12;Situbondo;situbondo;15
+35.13;Probolinggo;probolinggo;15
+35.14;Pasuruan;pasuruan;15
+35.15;Sidoarjo;sidoarjo;15
+35.16;Mojokerto;mojokerto;15
+35.17;Jombang;jombang;15
+35.18;Nganjuk;nganjuk;15
+35.19;Madiun;madiun;15
+35.20;Magetan;magetan;15
+35.21;Ngawi;ngawi;15
+35.22;Bojonegoro;bojonegoro;15
+35.23;Tuban;tuban;15
+35.24;Lamongan;lamongan;15
+35.25;Gresik;gresik;15
+35.26;Bangkalan;bangkalan;15
+35.27;Sampang;sampang;15
+35.28;Pamekasan;pamekasan;15
+35.29;Sumenep;sumenep;15
+35.71;Kota Kediri;kota-kediri;15
+35.72;Kota Blitar;kota-blitar;15
+35.73;Kota Malang;kota-malang;15
+35.74;Kota Probolinggo;kota-probolinggo;15
+35.75;Kota Pasuruan;kota-pasuruan;15
+35.76;Kota Mojokerto;kota-mojokerto;15
+35.77;Kota Madiun;kota-madiun;15
+35.78;Kota Surabaya;kota-surabaya;15
+35.79;Kota Batu;kota-batu;15
+36.01;Pandeglang;pandeglang;16
+36.02;Lebak;lebak;16
+36.03;Tangerang;tangerang;16
+36.04;Serang;serang;16
+36.71;Kota Tangerang;kota-tangerang;16
+36.72;Kota Cilegon;kota-cilegon;16
+36.73;Kota Serang;kota-serang;16
+36.74;Kota Tangerang Selatan;kota-tangerang-selatan;16
+51.01;Jembrana;jembrana;17
+51.02;Tabanan;tabanan;17
+51.03;Badung;badung;17
+51.04;Gianyar;gianyar;17
+51.05;Klungkung;klungkung;17
+51.06;Bangli;bangli;17
+51.07;Karangasem;karangasem;17
+51.08;Buleleng;buleleng;17
+51.71;Kota Denpasar;kota-denpasar;17
+52.01;Lombok Barat;lombok-barat;18
+52.02;Lombok Tengah;lombok-tengah;18
+52.03;Lombok Timur;lombok-timur;18
+52.04;Sumbawa;sumbawa;18
+52.05;Dompu;dompu;18
+52.06;Bima;bima;18
+52.07;Sumbawa Barat;sumbawa-barat;18
+52.08;Lombok Utara;lombok-utara;18
+52.71;Kota Mataram;kota-mataram;18
+52.72;Kota Bima;kota-bima;18
+53.01;Kupang;kupang;19
+53.02;Timor Tengah Selatan;timor-tengah-selatan;19
+53.03;Timor Tengah Utara;timor-tengah-utara;19
+53.04;Belu;belu;19
+53.05;Alor;alor;19
+53.06;Flores Timur;flores-timur;19
+53.07;Sikka;sikka;19
+53.08;Ende;ende;19
+53.09;Ngada;ngada;19
+53.10;Manggarai;manggarai;19
+53.11;Sumba Timur;sumba-timur;19
+53.12;Sumba Barat;sumba-barat;19
+53.13;Lembata;lembata;19
+53.14;Rote Ndao;rote-ndao;19
+53.15;Manggarai Barat;manggarai-barat;19
+53.16;Nagekeo;nagekeo;19
+53.17;Sumba Tengah;sumba-tengah;19
+53.18;Sumba Barat Daya;sumba-barat-daya;19
+53.19;Manggarai Timur;manggarai-timur;19
+53.20;Sabu Raijua;sabu-raijua;19
+53.21;Malaka;malaka;19
+53.71;Kota Kupang;kota-kupang;19
+61.01;Sambas;sambas;20
+61.02;Mempawah;mempawah;20
+61.03;Sanggau;sanggau;20
+61.04;Ketapang;ketapang;20
+61.05;Sintang;sintang;20
+61.06;Kapuas Hulu;kapuas-hulu;20
+61.07;Bengkayang;bengkayang;20
+61.08;Landak;landak;20
+61.09;Sekadau;sekadau;20
+61.10;Melawi;melawi;20
+61.11;Kayong Utara;kayong-utara;20
+61.12;Kubu Raya;kubu-raya;20
+61.71;Kota Pontianak;kota-pontianak;20
+61.72;Kota Singkawang;kota-singkawang;20
+62.01;Kotawaringin Barat;kotawaringin-barat;21
+62.02;Kotawaringin Timur;kotawaringin-timur;21
+62.03;Kapuas;kapuas;21
+62.04;Barito Selatan;barito-selatan;21
+62.05;Barito Utara;barito-utara;21
+62.06;Katingan;katingan;21
+62.07;Seruyan;seruyan;21
+62.08;Sukamara;sukamara;21
+62.09;Lamandau;lamandau;21
+62.10;Gunung Mas;gunung-mas;21
+62.11;Pulang Pisau;pulang-pisau;21
+62.12;Murung Raya;murung-raya;21
+62.13;Barito Timur;barito-timur;21
+62.71;Kota Palangkaraya;kota-palangkaraya;21
+63.01;Tanah Laut;tanah-laut;22
+63.02;Kotabaru;kotabaru;22
+63.03;Banjar;banjar;22
+63.04;Barito Kuala;barito-kuala;22
+63.05;Tapin;tapin;22
+63.06;Hulu Sungai Selatan;hulu-sungai-selatan;22
+63.07;Hulu Sungai Tengah;hulu-sungai-tengah;22
+63.08;Hulu Sungai Utara;hulu-sungai-utara;22
+63.09;Tabalong;tabalong;22
+63.10;Tanah Bumbu;tanah-bumbu;22
+63.11;Balangan;balangan;22
+63.71;Kota Banjarmasin;kota-banjarmasin;22
+63.72;Kota Banjarbaru;kota-banjarbaru;22
+64.01;Paser;paser;23
+64.02;Kutai Kartanegara;kutai-kartanegara;23
+64.03;Berau;berau;23
+64.07;Kutai Barat;kutai-barat;23
+64.08;Kutai Timur;kutai-timur;23
+64.09;Penajam Paser Utara;penajam-paser-utara;23
+64.11;Mahakam Ulu;mahakam-ulu;23
+64.71;Kota Balikpapan;kota-balikpapan;23
+64.72;Kota Samarinda;kota-samarinda;23
+64.74;Kota Bontang;kota-bontang;23
+65.01;Bulungan;bulungan;24
+65.02;Malinau;malinau;24
+65.03;Nunukan;nunukan;24
+65.04;Tana Tidung;tana-tidung;24
+65.71;Kota Tarakan;kota-tarakan;24
+71.01;Bolaang Mongondow;bolaang-mongondow;25
+71.02;Minahasa;minahasa;25
+71.03;Kepulauan Sangihe;kepulauan-sangihe;25
+71.04;Kepulauan Talaud;kepulauan-talaud;25
+71.05;Minahasa Selatan;minahasa-selatan;25
+71.06;Minahasa Utara;minahasa-utara;25
+71.07;Minahasa Tenggara;minahasa-tenggara;25
+71.08;Bolaang Mongondow Utara;bolaang-mongondow-utara;25
+71.09;Kepulauan Siau Tagulandang Biaro (Sitaro);kepulauan-siau-tagulandang-biaro-(sitaro);25
+71.10;Bolaang Mongondow Timur;bolaang-mongondow-timur;25
+71.11;Bolaang Mongondow Selatan;bolaang-mongondow-selatan;25
+71.71;Kota Manado;kota-manado;25
+71.72;Kota Bitung;kota-bitung;25
+71.73;Kota Tomohon;kota-tomohon;25
+71.74;Kota Kotamobagu;kota-kotamobagu;25
+72.01;Banggai;banggai;26
+72.02;Poso;poso;26
+72.03;Donggala;donggala;26
+72.04;Toli Toli;toli-toli;26
+72.05;Buol;buol;26
+72.06;Morowali;morowali;26
+72.07;Banggai Kepulauan;banggai-kepulauan;26
+72.08;Parigi Moutong;parigi-moutong;26
+72.09;Tojo Una Una;tojo-una-una;26
+72.10;Sigi;sigi;26
+72.11;Banggai Laut;banggai-laut;26
+72.12;Morowali Utara;morowali-utara;26
+72.71;Kota Palu;kota-palu;26
+73.01;Kepulauan Selayar;kepulauan-selayar;27
+73.02;Bulukumba;bulukumba;27
+73.03;Bantaeng;bantaeng;27
+73.04;Jeneponto;jeneponto;27
+73.05;Takalar;takalar;27
+73.06;Gowa;gowa;27
+73.07;Sinjai;sinjai;27
+73.08;Bone;bone;27
+73.09;Maros;maros;27
+73.10;Pangkajene Kepulauan;pangkajene-kepulauan;27
+73.11;Barru;barru;27
+73.12;Soppeng;soppeng;27
+73.13;Wajo;wajo;27
+73.14;Sidenreng Rappang;sidenreng-rappang;27
+73.15;Pinrang;pinrang;27
+73.16;Enrekang;enrekang;27
+73.17;Luwu;luwu;27
+73.18;Tana Toraja;tana-toraja;27
+73.22;Luwu Utara;luwu-utara;27
+73.24;Luwu Timur;luwu-timur;27
+73.26;Toraja Utara;toraja-utara;27
+73.71;Kota Makassar;kota-makassar;27
+73.72;Kota Pare Pare;kota-pare-pare;27
+73.73;Kota Palopo;kota-palopo;27
+74.01;Kolaka;kolaka;28
+74.02;Konawe;konawe;28
+74.03;Muna;muna;28
+74.04;Buton;buton;28
+74.05;Konawe Selatan;konawe-selatan;28
+74.06;Bombana;bombana;28
+74.07;Wakatobi;wakatobi;28
+74.08;Kolaka Utara;kolaka-utara;28
+74.09;Konawe Utara;konawe-utara;28
+74.10;Buton Utara;buton-utara;28
+74.11;Kolaka Timur;kolaka-timur;28
+74.12;Konawe Kepulauan;konawe-kepulauan;28
+74.13;Muna Barat;muna-barat;28
+74.14;Buton Tengah;buton-tengah;28
+74.15;Buton Selatan;buton-selatan;28
+74.71;Kota Kendari;kota-kendari;28
+74.72;Kota Bau Bau;kota-bau-bau;28
+75.01;Gorontalo;gorontalo;29
+75.02;Boalemo;boalemo;29
+75.03;Bone Bolango;bone-bolango;29
+75.04;Pahuwato;pahuwato;29
+75.05;Gorontalo Utara;gorontalo-utara;29
+75.71;Kota Gorontalo;kota-gorontalo;29
+76.01;Pasangkayu (Mamuju Utara);pasangkayu-(mamuju-utara);30
+76.02;Mamuju;mamuju;30
+76.03;Mamasa;mamasa;30
+76.04;Polewali Mandar;polewali-mandar;30
+76.05;Majene;majene;30
+76.06;Mamuju Tengah;mamuju-tengah;30
+81.01;Maluku Tengah;maluku-tengah;31
+81.02;Maluku Tenggara;maluku-tenggara;31
+81.03;Kepulauan Tanimbar;kepulauan-tanimbar;31
+81.04;Buru;buru;31
+81.05;Seram Bagian Timur;seram-bagian-timur;31
+81.06;Seram Bagian Barat;seram-bagian-barat;31
+81.07;Kepulauan Aru;kepulauan-aru;31
+81.08;Maluku Barat Daya;maluku-barat-daya;31
+81.09;Buru Selatan;buru-selatan;31
+81.71;Kota Ambon;kota-ambon;31
+81.72;Kota Tual;kota-tual;31
+82.01;Halmahera Barat;halmahera-barat;32
+82.02;Halmahera Tengah;halmahera-tengah;32
+82.03;Halmahera Utara;halmahera-utara;32
+82.04;Halmahera Selatan;halmahera-selatan;32
+82.05;Kepulauan Sula;kepulauan-sula;32
+82.06;Halmahera Timur;halmahera-timur;32
+82.07;Pulau Morotai;pulau-morotai;32
+82.08;Pulau Taliabu;pulau-taliabu;32
+82.71;Kota Ternate;kota-ternate;32
+82.72;Kota Tidore Kepulauan;kota-tidore-kepulauan;32
+91.03;Jayapura;jayapura;33
+91.05;Kepulauan Yapen;kepulauan-yapen;33
+91.06;Biak Numfor;biak-numfor;33
+91.10;Sarmi;sarmi;33
+91.11;Keerom;keerom;33
+91.15;Waropen;waropen;33
+91.19;Supiori;supiori;33
+91.20;Mamberamo Raya;mamberamo-raya;33
+91.71;Kota Jayapura;kota-jayapura;33
+92.02;Manokwari;manokwari;34
+92.03;Fak Fak;fak-fak;34
+92.06;Teluk Bintuni;teluk-bintuni;34
+92.07;Teluk Wondama;teluk-wondama;34
+92.08;Kaimana;kaimana;34
+92.11;Manokwari Selatan;manokwari-selatan;34
+92.12;Pegunungan Arfak;pegunungan-arfak;34
+93.01;Merauke;merauke;35
+93.02;Boven Digoel;boven-digoel;35
+93.03;Mappi;mappi;35
+93.04;Asmat;asmat;35
+94.01;Nabire;nabire;36
+94.02;Puncak Jaya;puncak-jaya;36
+94.03;Paniai;paniai;36
+94.04;Mimika;mimika;36
+94.05;Puncak;puncak;36
+94.06;Dogiyai;dogiyai;36
+94.07;Intan Jaya;intan-jaya;36
+94.08;Deiyai;deiyai;36
+95.01;Jayawijaya;jayawijaya;37
+95.02;Pegunungan Bintang;pegunungan-bintang;37
+95.03;Yahukimo;yahukimo;37
+95.04;Tolikara;tolikara;37
+95.05;Mamberamo Tengah;mamberamo-tengah;37
+95.06;Yalimo;yalimo;37
+95.07;Lanny Jaya;lanny-jaya;37
+95.08;Nduga;nduga;37
+96.01;Sorong;sorong;38
+96.04;Sorong Selatan;sorong-selatan;38
+96.05;Raja Ampat;raja-ampat;38
+96.09;Tambrauw;tambrauw;38
+96.10;Maybrat;maybrat;38
+96.71;Kota Sorong;kota-sorong;38
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
