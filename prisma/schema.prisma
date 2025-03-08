@@ -8,46 +8,54 @@ datasource db {
 }
 
 model Province {
-  id        Int      @id @default(autoincrement())
-  code      Int
-  slug      String   @db.VarChar(255)
-  name      String   @db.VarChar(255)
-  cities    City[]
+  id Int @id @default(autoincrement())
+
+  code   Int    @unique
+  slug   String @unique @db.VarChar(255)
+  name   String @unique @db.VarChar(255)
+  cities City[]
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
 model City {
-  id         Int        @id @default(autoincrement())
-  code       Int
-  slug       String     @db.VarChar(255)
-  name       String     @db.VarChar(255)
-  provinceId Int
-  province   Province   @relation(fields: [provinceId], references: [id])
-  districts  District[]
-  createdAt  DateTime   @default(now())
-  updatedAt  DateTime   @updatedAt
+  id Int @id @default(autoincrement())
+
+  code         Int        @unique
+  slug         String     @unique @db.VarChar(255)
+  name         String     @unique @db.VarChar(255)
+  provinceCode Int
+  province     Province   @relation(fields: [provinceCode], references: [code])
+  districts    District[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model District {
-  id           Int           @id @default(autoincrement())
-  code         Int
-  slug         String        @db.VarChar(255)
-  name         String        @db.VarChar(255)
-  cityId       Int
-  city         City          @relation(fields: [cityId], references: [id])
+  id Int @id @default(autoincrement())
+
+  code         Int           @unique
+  slug         String        @unique @db.VarChar(255)
+  name         String        @unique @db.VarChar(255)
+  cityCode     Int
+  city         City          @relation(fields: [cityCode], references: [code])
   subdistricts Subdistrict[]
-  createdAt    DateTime      @default(now())
-  updatedAt    DateTime      @updatedAt
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Subdistrict {
-  id         Int      @id @default(autoincrement())
-  code       Int
-  slug       String   @db.VarChar(255)
-  name       String   @db.VarChar(255)
-  districtId Int
-  district   District @relation(fields: [districtId], references: [id])
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+  id Int @id @default(autoincrement())
+
+  code         Int      @unique
+  slug         String   @unique @db.VarChar(255)
+  name         String   @unique @db.VarChar(255)
+  districtCode Int
+  district     District @relation(fields: [districtCode], references: [code])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

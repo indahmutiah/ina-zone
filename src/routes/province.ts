@@ -1,22 +1,9 @@
-import { provinces } from "@/data/province";
-import { type Province } from "@/types/zone";
 import { Hono } from "hono";
-import * as pg from "pg";
-import { PrismaClient } from "@prisma/client";
-import app from "..";
-import { $ } from "bun";
+import { PrismaClient, type Province } from "@prisma/client";
 
 const prisma = new PrismaClient({
   log: ["query"],
 });
-
-let dataProvinces = provinces;
-
-const client = new pg.Client({
-  connectionString: process.env.DATABASE_URL,
-});
-
-await client.connect();
 
 export const provinceRoute = new Hono();
 
