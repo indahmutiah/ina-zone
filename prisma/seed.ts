@@ -11,6 +11,7 @@ async function main() {
   });
 
   const existingProvinces = await prisma.province.findMany();
+
   const provinceMap = Object.fromEntries(
     existingProvinces.map((province) => [province.id, province.id])
   );
@@ -19,6 +20,7 @@ async function main() {
     ...city,
     provinceId: provinceMap[city.provinceId],
   }));
+
   if (city.length > 0) {
     await prisma.city.createMany({
       data: city,
@@ -27,6 +29,25 @@ async function main() {
   } else {
     console.error("No valid cities found, check provinceId mapping!");
   }
+}
+
+async function simplerMain() {
+  await prisma.province.upsert({
+    where: { slug: "aceh" },
+    create: {
+      code: 11,
+      slug: "aceh",
+      name: "Aceh",
+      cities: {
+        connect: [{ slug: "aceh-besar" }],
+      },
+    },
+    update: {
+      code: 11,
+      slug: "aceh",
+      name: "Aceh",
+    },
+  });
 }
 
 main()

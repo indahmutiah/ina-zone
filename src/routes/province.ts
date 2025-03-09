@@ -1,5 +1,6 @@
 import { Hono } from "hono";
 import { PrismaClient, type Province } from "@prisma/client";
+import { CreateProvince } from "@/modules/province/type";
 
 const prisma = new PrismaClient({
   log: ["query"],
@@ -42,7 +43,7 @@ provinceRoute.get("/:id", async (c) => {
       data: resultProvince,
     });
   } catch (error) {
-    return c.json({ message: "Internal Server Error" }, 500);
+    return c.json({ message: "Failed to get province by id" }, 500);
   }
 });
 
@@ -93,8 +94,8 @@ provinceRoute.get("/slug/:slug", async (c) => {
 // Create Province
 provinceRoute.post("/create", async (c) => {
   try {
-    const body: Omit<Province, "id" | "createdAt" | "updatedAt"> =
-      await c.req.json();
+    const body: CreateProvince = await c.req.json();
+
     const findDuplicateProvince = await prisma.province.findFirst({
       where: {
         name: {
@@ -109,13 +110,7 @@ provinceRoute.post("/create", async (c) => {
     }
 
     const newProvince = await prisma.province.create({
-      data: {
-        code: body.code,
-        name: body.name,
-        slug: body.slug,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      },
+      data: body,
     });
 
     return c.json({
@@ -124,13 +119,13 @@ provinceRoute.post("/create", async (c) => {
     });
   } catch (error) {
     console.error(error);
-    return c.json({ message: "Internal Server Error", error }, 500);
+    return c.json({ message: "Failed to create province", error }, 500);
   }
 });
 
 // Delete Province By Id
 provinceRoute.delete("/:id", async (c) => {
-  const id = c.req.param("id");
+  const id = Number(c.req.param("id"));
   const foundProvince = await prisma.province.findFirst({
     where: {
       id: Number(id),
@@ -140,27 +135,22 @@ provinceRoute.delete("/:id", async (c) => {
   if (!foundProvince) {
     return c.json({ message: "Province not found" }, 404);
   }
-  await prisma.province.delete({
-    where: {
-      id: Number(id),
-    },
-  });
+  const result = await prisma.province.delete({ where: { id } });
 
   return c.json({
     message: "Province deleted successfully",
     data: foundProvince,
+    result,
   });
 });
 
 // Update Province By Id
 provinceRoute.patch("/:id", async (c) => {
-  const id = c.req.param("id");
+  const id = Number(c.req.param("id"));
   const body = await c.req.json();
 
   const foundProvince = await prisma.province.findUnique({
-    where: {
-      id: Number(id),
-    },
+    where: { id },
   });
 
   if (!foundProvince) {
@@ -168,14 +158,8 @@ provinceRoute.patch("/:id", async (c) => {
   }
 
   const updatedProvinces = await prisma.province.update({
-    where: {
-      id: Number(id),
-    },
-    data: {
-      ...foundProvince,
-      ...body,
-      updatedAt: new Date(),
-    },
+    where: { id },
+    data: foundProvince,
   });
 
   return c.json({
@@ -196,11 +180,7 @@ provinceRoute.put("/:id", async (c) => {
 
   if (!foundProvince) {
     const newProvince = await prisma.province.create({
-      data: {
-        ...body,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      },
+      data: body,
     });
 
     return c.json({
@@ -215,7 +195,6 @@ provinceRoute.put("/:id", async (c) => {
     data: {
       ...foundProvince,
       ...body,
-      updatedAt: new Date(),
     },
   });
 
