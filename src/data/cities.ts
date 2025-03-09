@@ -1,67 +1,73 @@
 import { City } from "@prisma/client";
 
-type DataCity = Omit<City, "id" | "createdAt" | "updatedAt">;
+type SeedDataCity = Omit<
+  City,
+  "id" | "createdAt" | "updatedAt" | "provinceId"
+> & {
+  provinceSlug?: string;
+  provinceId?: number;
+};
 
-export const cities: DataCity[] = [
+export const cities: SeedDataCity[] = [
   {
     code: 1101,
     name: "Aceh Selatan",
     slug: "aceh-selatan",
-    provinceId: 1,
+    provinceSlug: "aceh",
   },
   {
     code: 1102,
     name: "Aceh Tenggara",
     slug: "aceh-tenggara",
-    provinceId: 1,
+    provinceSlug: "aceh",
   },
   {
     code: 1103,
     name: "Aceh Timur",
     slug: "aceh-timur",
-    provinceId: 1,
+    provinceSlug: "aceh",
   },
   {
     code: 1104,
     name: "Aceh Tengah",
     slug: "aceh-tengah",
-    provinceId: 1,
+    provinceSlug: "aceh",
   },
   {
     code: 1105,
     name: "Aceh Barat",
     slug: "aceh-barat",
-    provinceId: 1,
+    provinceSlug: "aceh",
   },
   {
     code: 1106,
     name: "Aceh Besar",
     slug: "aceh-besar",
-    provinceId: 1,
+    provinceSlug: "aceh",
   },
   {
     code: 1107,
     name: "Pidie",
     slug: "pidie",
-    provinceId: 1,
+    provinceSlug: "aceh",
   },
   {
     code: 1108,
     name: "Aceh Utara",
     slug: "aceh-utara",
-    provinceId: 1,
+    provinceSlug: "aceh",
   },
   {
     code: 1109,
     name: "Simeulue",
     slug: "simeulue",
-    provinceId: 1,
+    provinceSlug: "aceh",
   },
   {
     code: 1110,
     name: "Aceh Singkil",
     slug: "aceh-singkil",
-    provinceId: 1,
+    provinceSlug: "aceh",
   },
   {
     code: 1111,
@@ -979,43 +985,43 @@ export const cities: DataCity[] = [
     code: 3203,
     name: "Cianjur",
     slug: "cianjur",
-    provinceId: 12,
+    provinceSlug: "jawa-barat",
   },
   {
     code: 3204,
     name: "Bandung",
     slug: "bandung",
-    provinceId: 12,
+    provinceSlug: "jawa-barat",
   },
   {
     code: 3205,
     name: "Garut",
     slug: "garut",
-    provinceId: 12,
+    provinceSlug: "jawa-barat",
   },
   {
     code: 3206,
     name: "Tasikmalaya",
     slug: "tasikmalaya",
-    provinceId: 12,
+    provinceSlug: "jawa-barat",
   },
   {
     code: 3207,
     name: "Ciamis",
     slug: "ciamis",
-    provinceId: 12,
+    provinceSlug: "jawa-barat",
   },
   {
     code: 3208,
     name: "Kuningan",
     slug: "kuningan",
-    provinceId: 12,
+    provinceSlug: "jawa-barat",
   },
   {
     code: 3209,
     name: "Cirebon",
     slug: "cirebon",
-    provinceId: 12,
+    provinceSlug: "jawa-barat",
   },
   {
     code: 3210,
