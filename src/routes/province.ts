@@ -9,7 +9,11 @@ export const provinceRoute = new Hono();
 
 // Get All Provinces from Database prisma
 provinceRoute.get("/", async (c) => {
-  const resultProvinces = await prisma.province.findMany();
+  const resultProvinces = await prisma.province.findMany({
+    include: {
+      cities: true,
+    },
+  });
   return c.json({
     message: "Get All Provinces",
     data: resultProvinces,
@@ -23,6 +27,9 @@ provinceRoute.get("/:id", async (c) => {
     const resultProvince = await prisma.province.findUnique({
       where: {
         id: Number(id),
+      },
+      include: {
+        cities: true,
       },
     });
 
@@ -46,6 +53,9 @@ provinceRoute.get("/code/:code", async (c) => {
     where: {
       code: Number(code),
     },
+    include: {
+      cities: true,
+    },
   });
 
   if (!resultProvince) {
@@ -64,6 +74,9 @@ provinceRoute.get("/slug/:slug", async (c) => {
   const resultProvince = await prisma.province.findFirst({
     where: {
       slug: slug.toLowerCase(),
+    },
+    include: {
+      cities: true,
     },
   });
 
