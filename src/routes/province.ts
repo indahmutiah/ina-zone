@@ -1,6 +1,10 @@
 import { Hono } from "hono";
 import { PrismaClient, type Province } from "@prisma/client";
+<<<<<<< HEAD
 import { CreateProvince } from "../modules/province";
+=======
+import { CreateProvince } from "@/modules/province/type";
+>>>>>>> 964c74529ac932c45700359c735697656c25b63d
 
 const prisma = new PrismaClient({
   log: ["query"],
@@ -41,7 +45,7 @@ provinceRoute.get("/:id", async (c) => {
       data: resultProvince,
     });
   } catch (error) {
-    return c.json({ message: "Internal Server Error" }, 500);
+    return c.json({ message: "Failed to get province by id" }, 500);
   }
 });
 
