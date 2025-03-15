@@ -1,5 +1,6 @@
 import { Hono } from "hono";
 import { PrismaClient, type Province } from "@prisma/client";
+import { CreateProvince } from "../modules/province";
 
 const prisma = new PrismaClient({
   log: ["query"],
@@ -22,12 +23,10 @@ provinceRoute.get("/", async (c) => {
 
 // Get Province By Id
 provinceRoute.get("/:id", async (c) => {
-  const id = c.req.param("id");
+  const id = Number(c.req.param("id"));
   try {
     const resultProvince = await prisma.province.findUnique({
-      where: {
-        id: Number(id),
-      },
+      where: { id },
       include: {
         cities: true,
       },
@@ -48,11 +47,9 @@ provinceRoute.get("/:id", async (c) => {
 
 // Get Province By Code
 provinceRoute.get("/code/:code", async (c) => {
-  const code = c.req.param("code");
+  const code = Number(c.req.param("code"));
   const resultProvince = await prisma.province.findFirst({
-    where: {
-      code: Number(code),
-    },
+    where: { code },
     include: {
       cities: true,
     },
@@ -93,8 +90,8 @@ provinceRoute.get("/slug/:slug", async (c) => {
 // Create Province
 provinceRoute.post("/create", async (c) => {
   try {
-    const body: Omit<Province, "id" | "createdAt" | "updatedAt"> =
-      await c.req.json();
+    const body: CreateProvince = await c.req.json();
+
     const findDuplicateProvince = await prisma.province.findFirst({
       where: {
         name: {
@@ -109,13 +106,7 @@ provinceRoute.post("/create", async (c) => {
     }
 
     const newProvince = await prisma.province.create({
-      data: {
-        code: body.code,
-        name: body.name,
-        slug: body.slug,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      },
+      data: body,
     });
 
     return c.json({
@@ -124,26 +115,22 @@ provinceRoute.post("/create", async (c) => {
     });
   } catch (error) {
     console.error(error);
-    return c.json({ message: "Internal Server Error", error }, 500);
+    return c.json({ message: "Failed to create province", error }, 500);
   }
 });
 
 // Delete Province By Id
 provinceRoute.delete("/:id", async (c) => {
-  const id = c.req.param("id");
+  const id = Number(c.req.param("id"));
   const foundProvince = await prisma.province.findFirst({
-    where: {
-      id: Number(id),
-    },
+    where: { id },
   });
 
   if (!foundProvince) {
     return c.json({ message: "Province not found" }, 404);
   }
   await prisma.province.delete({
-    where: {
-      id: Number(id),
-    },
+    where: { id },
   });
 
   return c.json({
@@ -154,13 +141,11 @@ provinceRoute.delete("/:id", async (c) => {
 
 // Update Province By Id
 provinceRoute.patch("/:id", async (c) => {
-  const id = c.req.param("id");
+  const id = Number(c.req.param("id"));
   const body = await c.req.json();
 
   const foundProvince = await prisma.province.findUnique({
-    where: {
-      id: Number(id),
-    },
+    where: { id },
   });
 
   if (!foundProvince) {
@@ -168,14 +153,8 @@ provinceRoute.patch("/:id", async (c) => {
   }
 
   const updatedProvinces = await prisma.province.update({
-    where: {
-      id: Number(id),
-    },
-    data: {
-      ...foundProvince,
-      ...body,
-      updatedAt: new Date(),
-    },
+    where: { id },
+    data: foundProvince,
   });
 
   return c.json({
@@ -186,21 +165,15 @@ provinceRoute.patch("/:id", async (c) => {
 
 // Update Province By Id, Create if not exist
 provinceRoute.put("/:id", async (c) => {
-  const id = c.req.param("id");
+  const id = Number(c.req.param("id"));
   const body = await c.req.json();
   const foundProvince = await prisma.province.findUnique({
-    where: {
-      id: Number(id),
-    },
+    where: { id },
   });
 
   if (!foundProvince) {
     const newProvince = await prisma.province.create({
-      data: {
-        ...body,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      },
+      data: body,
     });
 
     return c.json({
@@ -209,13 +182,10 @@ provinceRoute.put("/:id", async (c) => {
     });
   }
   const updatedProvince = await prisma.province.update({
-    where: {
-      id: Number(id),
-    },
+    where: { id },
     data: {
       ...foundProvince,
       ...body,
-      updatedAt: new Date(),
     },
   });
 

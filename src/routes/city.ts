@@ -22,12 +22,10 @@ citiesRoute.get("/", async (c) => {
 
 // Get City By Id
 citiesRoute.get("/:id", async (c) => {
-  const id = c.req.param("id");
+  const id = Number(c.req.param("id"));
   try {
     const resultCity = await prisma.city.findUnique({
-      where: {
-        id: Number(id),
-      },
+      where: { id },
       include: {
         province: true,
       },
@@ -48,11 +46,9 @@ citiesRoute.get("/:id", async (c) => {
 
 // Get City By Code
 citiesRoute.get("/code/:code", async (c) => {
-  const code = c.req.param("code");
+  const code = Number(c.req.param("code"));
   const resultCity = await prisma.city.findFirst({
-    where: {
-      code: Number(code),
-    },
+    where: { code },
     include: {
       province: true,
     },
