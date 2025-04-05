@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { PrismaClient, type Province } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 import { CreateProvince } from "@/modules/province/type";
 
 const prisma = new PrismaClient({
