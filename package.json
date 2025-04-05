@@ -9,7 +9,8 @@
     "db:migrate:deploy": "prisma migrate deploy",
     "db:gen": "prisma generate --no-hints",
     "db:studio": "prisma studio",
-    "db:seed": "prisma db seed"
+    "db:seed": "prisma db seed",
+    "db:reset": "prisma migrate reset"
   },
   "prisma": {
     "seed": "bun run prisma/seed.ts"

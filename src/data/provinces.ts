@@ -188,4 +188,9 @@ export const provinces: DataProvince[] = [
     slug: "papua-pegunungan",
     name: "Papua Pegunungan",
   },
+  {
+    code: 96,
+    slug: "papua-barat-daya",
+    name: "Papua Barat Daya",
+  },
 ];

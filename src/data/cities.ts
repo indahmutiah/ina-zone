@@ -3054,4 +3054,40 @@ export const cities: DataCity[] = [
     slug: "nduga",
     provinceSlug: "papua-pegunungan",
   },
+  {
+    code: 96.01,
+    name: "Sorong",
+    slug: "sorong",
+    provinceSlug: "papua-barat-daya",
+  },
+  {
+    code: 96.04,
+    name: "Sorong Selatan",
+    slug: "sorong-selatan",
+    provinceSlug: "papua-barat-daya",
+  },
+  {
+    code: 96.05,
+    name: "Raja Ampat",
+    slug: "raja-ampat",
+    provinceSlug: "papua-barat-daya",
+  },
+  {
+    code: 96.09,
+    name: "Tambrauw",
+    slug: "tambrauw",
+    provinceSlug: "papua-barat-daya",
+  },
+  {
+    code: 96.1,
+    name: "Maybrat",
+    slug: "maybrat",
+    provinceSlug: "papua-barat-daya",
+  },
+  {
+    code: 96.71,
+    name: "Kota Sorong",
+    slug: "kota-sorong",
+    provinceSlug: "papua-barat-daya",
+  },
 ];
