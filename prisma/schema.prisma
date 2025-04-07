@@ -22,7 +22,7 @@ model Province {
 model City {
   id Int @id @default(autoincrement())
 
-  code       Int
+  code       String   @unique @db.VarChar(255)
   slug       String   @unique @db.VarChar(255)
   name       String   @unique @db.VarChar(255)
   provinceId Int

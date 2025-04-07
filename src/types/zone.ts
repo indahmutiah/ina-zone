@@ -10,7 +10,7 @@ export type Province = {
 export type City = {
   id: number;
   provinceId: number;
-  code: number;
+  code: string;
   slug: string;
   name: string;
   createdAt: Date;
