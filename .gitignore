@@ -7,3 +7,7 @@ node_modules/
 
 # logs
 *.log
+
+.gitignore
+src/routes/provinces.ts
+src/types/
