@@ -13,6 +13,7 @@ Links:
 - Bun
 - Hono
 - TypeScript
+- Zod OpenAPI
 - Docker
 - PostgreSQL
 - Prisma
@@ -25,24 +26,26 @@ Links:
 
 - Get all provincess
 - Get provinces by id
-- Create new provinces
-- Update provinces by id
-- Delete provinces by id
+- Get provinces by code
+- Get provinces by slug
+- Get all cities
+- Get cities by id
+- Get cities by code
 
 ## Rest API Specification
 
 Prefix: `/api/`
 
-| Enpoint Path           | Method   | Description                                 |
-| ---------------------- | -------- | ------------------------------------------- |
-| `provinces`            | `GET`    | Get all provinces                           |
-| `provinces/:id`        | `GET`    | Get provinces by id                         |
-| `provinces/code/:code` | `GET`    | Get provinces by code                       |
-| `provinces/slug/:slug` | `GET`    | Get provinces by slug                       |
-| `provinces`            | `POST`   | Create new province                         |
-| `provinces/:id`        | `DELETE` | Delete provinces by id                      |
-| `provinces/:id`        | `PATCH`  | Update provinces by id                      |
-| `provinces/:id`        | `PUR`    | Update provinces by id, create if not exist |
+| Enpoint Path          | Method | Description           |
+| --------------------- | ------ | --------------------- |
+| `province`            | `GET`  | Get all provinces     |
+| `province/:id`        | `GET`  | Get provinces by id   |
+| `province/code/:code` | `GET`  | Get provinces by code |
+| `province/slug/:slug` | `GET`  | Get provinces by slug |
+| `city`                | `GET`  | Get all cities        |
+| `city/:id`            | `GET`  | Get cities by id      |
+| `city/code/:code`     | `GET`  | Get cities by code    |
+| `city/slug/:slug`     | `GET`  | Get cities by slug    |
 
 ## Getting Started
 

@@ -11,3 +11,4 @@ node_modules/
 .gitignore
 src/routes/provinces.ts
 src/types/
+src/modules/province/types/
