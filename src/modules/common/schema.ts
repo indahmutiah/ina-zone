@@ -19,7 +19,7 @@ export const ParamCodeSchema = z.object({
 });
 
 export const ParamCodeCitySchema = z.object({
-  code: z.string().describe("Code of the city"),
+  code: z.string().describe("Code of the city, example: 32.01"),
 });
 
 export const QuerySchema = z.object({
