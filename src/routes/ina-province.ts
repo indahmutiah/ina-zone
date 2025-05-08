@@ -57,9 +57,6 @@ inaProvinceRoute.openapi(
     const { slug } = c.req.valid("param");
     const province = await prisma.province.findUnique({
       where: { slug },
-      include: {
-        cities: true,
-      },
     });
     if (!province) {
       return c.json({ message: "Province not found" }, 404);
@@ -90,9 +87,6 @@ inaProvinceRoute.openapi(
     const { code } = c.req.valid("param");
     const province = await prisma.province.findUnique({
       where: { code },
-      include: {
-        cities: true,
-      },
     });
     if (!province) {
       return c.json({ message: "Province not found" }, 404);
@@ -123,9 +117,6 @@ inaProvinceRoute.openapi(
     const { id } = c.req.valid("param");
     const province = await prisma.province.findUnique({
       where: { id },
-      include: {
-        cities: true,
-      },
     });
     if (!province) {
       return c.json({ message: "Province not found" }, 404);

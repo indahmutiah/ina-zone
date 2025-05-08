@@ -8,14 +8,18 @@ export const ParamIdSchema = z.object({
   id: z
     .string()
     .transform((val) => parseInt(val, 10))
-    .refine((val) => !isNaN(val), { message: "Invalid ID format" }),
+    .refine((val) => !isNaN(val), { message: "Invalid ID format" })
+    .describe("ID of the zone"),
 });
 
 export const ParamCodeSchema = z.object({
   code: z
     .string()
+    .refine((val) => /^\d{2,3}$/.test(val), {
+      message: "Code must be 2 to 3 digits",
+    })
     .transform((val) => parseInt(val, 10))
-    .refine((val) => !isNaN(val), { message: "Invalid Code format" }),
+    .describe("Code of the zone"),
 });
 
 export const ParamCodeCitySchema = z.object({
