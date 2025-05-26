@@ -12,7 +12,7 @@ app.doc("/openapi.json", {
   info: {
     title: "INA Zone API",
     description:
-      "OpenAPI for Indonesian Provinces and Cities. \n\nThis API provides information about 38 provinces and 1,500 cities in Indonesia. \n\nThe API is built using Bun, TypeScript, and Prisma.",
+      "OpenAPI for Indonesian Provinces and Cities. \n\nThis API provides information about 38 provinces and 514 cities in Indonesia. \n\nThe API is built using Bun, TypeScript, and Prisma.",
     contact: {
       url: "https://github.com/indahmutiah/ina-zone",
       name: "Indah Mutiah MZ",
