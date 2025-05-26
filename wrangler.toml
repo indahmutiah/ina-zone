@@ -2,3 +2,11 @@ name = "nama-worker-kamu"
 type = "javascript"
 compatibility_date = "2025-05-26"
 main = "src/index.ts"
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+[env.staging.observability]
+enabled = true
+head_sampling_rate = 1
