@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client/edge";
 import { createRoute, OpenAPIHono } from "@hono/zod-openapi";
 import { ProvinceSchema, ProvinceListSchema } from "@/modules/province/schema";
 import {
@@ -6,8 +6,9 @@ import {
   ParamIdSchema,
   ParamSlugSchema,
 } from "@/modules/common/schema";
+import { withAccelerate } from "@prisma/extension-accelerate";
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient().$extends(withAccelerate());
 
 export const inaProvinceRoute = new OpenAPIHono();
 

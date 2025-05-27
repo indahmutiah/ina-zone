@@ -1,14 +1,14 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client/edge";
 import { createRoute, OpenAPIHono } from "@hono/zod-openapi";
 import { CitySchema, CityListSchema } from "@/modules/city/schema";
 import {
   ParamCodeCitySchema,
-  ParamCodeSchema,
   ParamIdSchema,
   ParamSlugSchema,
 } from "@/modules/common/schema";
+import { withAccelerate } from "@prisma/extension-accelerate";
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient().$extends(withAccelerate());
 
 export const inaCityRoute = new OpenAPIHono();
 
