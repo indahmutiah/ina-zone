@@ -12,3 +12,4 @@ node_modules/
 src/routes/provinces.ts
 src/types/
 src/modules/province/types/
+package-lock.json
