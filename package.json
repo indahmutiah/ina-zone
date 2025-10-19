@@ -3,8 +3,8 @@
   "type": "module",
   "scripts": {
     "dev": "bun run --hot src/index.ts",
-    "build": "bun build src/index.ts --outdir dist && bun db:gen",
-    "start": "bun run dist/index.js",
+    "build": "bun install && bun db:gen",
+    "start": "bun run src/index.ts",
     "docker:up": "docker compose up -d",
     "docker:up:prod": "docker compose -f docker-compose.prod.yml up -d",
     "db:migrate": "prisma migrate dev",

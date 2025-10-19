@@ -1,9 +1,0 @@
-[build]
-builder = "NIXPACKS"
-buildCommand = "bun run build"
-
-[build.env]
-NODE_ENV = "production"
-
-[deploy]
-startCommand = "bun run start"
