@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client/edge";
+import { PrismaClient } from "@prisma/client";
 import { createRoute, OpenAPIHono } from "@hono/zod-openapi";
 import { ProvinceSchema, ProvinceListSchema } from "@/modules/province/schema";
 import {
